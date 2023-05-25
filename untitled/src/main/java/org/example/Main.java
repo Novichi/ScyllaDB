@@ -7,6 +7,7 @@ import com.datastax.driver.core.*;
 import com.datastax.driver.core.policies.DCAwareRoundRobinPolicy;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
         File bundleFile = new File("D:/Uczelnia/ScyllaDB/untitled/connect-bundle-Informatyka_UE_2023.yaml");
 
@@ -28,6 +29,7 @@ public class Main {
         for (Row row: resultSet.all()) {
             System.out.println(row.toString());
         }
-
+        DatabaseOperations dboperations = new DatabaseOperations(session);
     }
+
 }
